@@ -5,4 +5,6 @@
 layout: home
 ---
 
-Hi
+This is a simple collection of technical notes I tend to forget, but would prefer not to. 
+
+Also I hope it helps someone in the future. 
