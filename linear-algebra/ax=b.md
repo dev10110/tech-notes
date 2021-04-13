@@ -87,3 +87,5 @@ todo, proofs of each of the three simple cases above.
 
 
 ## Solutions of other cases, using Singular Value Decomposition
+
+todo.
