@@ -13,4 +13,14 @@ helper:
 https://pdmosses.github.io/just-the-docs-tests/
 https://pdmosses.github.io/test-nav/docs/Mathjax/
 
+## Usage:
+
+local dev
+```
+bundle exec jekyll serve
+```
+and navigate to the listed location. 
+
+After every edit, we can refresh the page to see the updates.
+
 
