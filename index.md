@@ -7,4 +7,6 @@ layout: home
 
 This is a simple collection of technical notes I tend to forget, but would prefer not to. 
 
-Also I hope it helps someone in the future. 
+I hope it helps someone in the future. 
+
+My personal webiste is at: [dev10110.github.io](dev10110.github.io)
