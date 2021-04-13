@@ -36,42 +36,54 @@ A few useful properties:
 |dep. rows: $$N(A^*) \neq \{0\}$$ (fat)  | (same as above) solution not unique ![](../assets/images/axb/case4.png)| (same as above)  no solution ![](../assets/images/axb/case5.png)|
 
 
-## More Details
+## Left and Right Inverses
 
-In the most general case, we can split the solutions as follows:
+Following [Boyd's textbook on linear algebra](https://stanford.edu/~boyd/vmls/vmls.pdf), we define
 
-$$
-x = x_r + x_n\\
-b = b_r + b_n
-$$
+1. The **left inverse** $$X$$ of a matrix $$A$$ is *any* martix that satisfies $$X A = I$$.
+2. The **right inverse** $$Y$$ of a matrix $$A$$ is *any* matrix that satisfies $$A Y = I$$.
 
-where
+These have the following useful properties (proofs are simple, and I refer you to Boyd's book, Ch 11):
 
-$$
-b_r \in R(A)\\
-x_n \in N(A)\\
-x_r \in R(A^*)\\
-b_n \in N(A^*)
-$$
+1. The left inverse exists iff and only if the columns of $$A$$ are linearly independent.
+2. A matrix can only have a left inverse if it is tall (or square).
+3. If a matrix $$A$$ has left inverse $$X$$, then a solution to $$Ax = b$$ is $$x = X b$$. 
+4. A left invertible matrix $$A$$ has left inverse $$X = (A^*A)^{-1}A^*$$.
+5. Left inverses are, in general, not unique.
 
-then we have the following relations:
+Similarly, we can take the transpose of the above claims:
+1. The right inverse exists iff and only if the rows of $$A$$ are linearly independent.
+2. A matrix can only have a right inverse if it is fat (or square).
+3. If a matrix $$A$$ has right inverse $$Y$$, then a solution to $$Ax = b$$ is $$x = Y b$$. 
+4. A right invertible matrix $$A$$ has right inverse $$Y = A (AA^*)^{-1}$$.
+5. Right inverses are, in general, not unique.
 
-$$
-A x_n = 0\\
-A^* b_n = 0\\
-$$
-
-And so 
+Then suppose a matrix is both left and right invertible. Then the left and right inverses are equal and unique!
 
 $$
-Ax = b\\
-A(x_r + x_n) = b_r + b_n\\
-A x_r = b_r + b_n
+XA = I, \quad \text{ and } \quad AY = I\\
+\implies X = X (AY) = (XA) Y = Y
 $$
 
-and so 
 
-$$
-A^* A x_r = A^*b_r \implies \text{ if } A^* A \text{ is invertible, }  \quad x_r = (A^* A )^{-1} A^* b, 
-$$
+Thus the **inverse** of a matrix $$A$$, if it exists, is $$A^{-1} \triangleq X = Y$$. 
 
+Notice that this only makes sense for square matrices, since for the left inverse to exist it must be tall, and for the right inverse to exist it must be fat. Thus, $$A$$ must be square.
+
+The two special inverses $$X = (A^*A)^{-1}A^*$$ or $$Y = A (AA^*)^{-1}$$ require the matrices $$(A^*A)$$ or $$(AA^*)$$ to be invertible. This is always possible for left/right invertible matrices $$A$$, ie, if they have either linearly independent columns or rows.
+
+But what about if this is not the case? We can use the Moore-Penrose **Psuedo-Inverse**, which is any matrix $$A^+$$ that satisfies the following four properties:
+
+1. $$AA^+A = A$$
+2. $$A^+ A A^+ = A^+$$
+3. $$(AA^+)^* = AA^+$$
+4. $$(A^+A)^* = A^+A$$
+
+The psuedo inverse *always* exists, and is *always* unique. If $$A$$ is left or right invertible, the psuedo-inverse is the left or right inverse. If $$A$$ is invertible, the psuedo inverse is the inverse of $$A$$. This makes it a powerful abstraction of inverses, but you need to be careful: $$A^+ A \neq I$$ in general.
+
+## Solutions of simple cases
+
+todo, proofs of each of the three simple cases above. 
+
+
+## Solutions of other cases, using Singular Value Decomposition
