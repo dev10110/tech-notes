@@ -200,3 +200,77 @@ $$
 
 
 Note: Computing the reachability grammian for a LTV system, is, in general, not simple. It involves computing $$n^2$$ integrals over the specified time domain. If the system is a LTI system, the Lyapunov equation can be solved to determine the reachability grammian.  
+
+
+## Motivation for $$W_r = \prec F, F \succ$$
+
+We know from the solution of linear systems that 
+
+$$
+x(t_1) = \int_{t_0}^{t_1} \phi(t_1, \tau) B(\tau) u(\tau) d\tau
+$$
+
+if $$x(t_0) = 0$$. 
+
+This operation is actual a linear operation:
+
+$$
+x_1 = \mathcal{L}_u( u(\cdot))
+$$
+
+where $$\mathcal{L}_u$$ is a linear operator that takes in a function $$u : [t_0, t_1] \rightarrow R^m$$, and returns a state $$x_1 \in R^n$$. Thus we can write:
+
+$$
+\mathcal{L}_u : C([t_0, t_1], R^m) \rightarrow R^n
+$$
+
+And now the set of reachable states must be the range of this linear operator: $$\mathcal{R} = R(\mathcal{L}_u)$$. Since $$\mathcal{L}_u$$ isn't a matrix, you can't directly use Matlab or Julia to compute $$R(\mathcal{L}_u)$$. Nonetheless, we plough on.
+
+We know from linear algebra that for any linear operator $$\mathcal{A}$$, 
+
+$$
+R(\mathcal{A}) = R(\mathcal{A} \mathcal{A}^*)
+$$
+
+that is the range of $$\mathcal{A}$$ is the same as the range of $$\mathcal{A}\mathcal{A}^*$$. 
+
+Applied to $$\mathcal{L_u}$$, we have 
+
+$$
+R(\mathcal{L_u}) = R(\mathcal{L}_u \mathcal{L}_u^*)
+$$
+
+And now notice that 
+
+$$
+\mathcal{L}_u \mathcal{L}_u^* : R^n \rightarrow R^n
+$$
+
+which means we might be able to represent it as some matrix. We need to find $$\mathcal{L}_u^*$$ first:
+
+Using the properties of the adjoint,
+
+$$
+\begin{align*}
+\prec \mathcal{L}_u(u(\cdot)), x_1 \succ &=(\mathcal{L}_u ( u(\cdot)))^T x_1\\
+&= \left( \int_{t_0}^{t_1} u(\tau)^T B(\tau)^T \phi(t_1, \tau)^T d\tau \right) x_1\\
+&= \prec u(\cdot), B(\cdot)^T \phi(t_1, \cdot)^T x_1\succ\\
+&= \prec  u(\cdot), \mathcal{L}_u^* (x_1) \succ
+\end{align*}
+$$
+
+and thus 
+
+$$
+\mathcal{L}_u^* (x_1) = B(\cdot)^T \phi(t_1, \cdot)^T x_1
+$$
+
+so 
+
+$$
+\mathcal{L}_u \mathcal{L}_u^* = \int_{t_0}^{t_1} \phi(t_1, \tau) B(\tau) B(\tau)^T \phi(t_1, \tau)^T d\tau
+$$
+
+which is the reachability grammian. 
+
+The above analysis is pretty much the same as that above, where $$F = \mathcal{L}_u$$. The proof is slightly different, and shows how the properties of linear algebra can be applied far beyond just matrices.

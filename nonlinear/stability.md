@@ -218,28 +218,36 @@ The equilibrium point $$x=0$$ for the non-autonomous system is
 - **unstable** if it is not stable.
 - **stable**, if, for every $$\epsilon > 0$$ there exists a $$\delta = \delta(\epsilon, t_0) > 0$$ such that 
 
-$$ \|x(t_0)\| < \delta  \implies \| x(t) \| < \epsilon, \forall t \geq t_0 \geq 0$$ 
+$$ \|x(t_0)\| < \delta(\epsilon, t_0)  \implies \| x(t) \| < \epsilon, \quad \forall t \geq t_0 \geq 0$$ 
 
--  **uniformly stable** if $$\delta = \delta(\epsilon) >0 $$ can be chosen independently of $$t_0$$ such that $$x=0$$ is stable.
+-  **uniformly stable** if for each $$\epsilon > 0$$, there is a $$\delta = \delta(\epsilon) >0$$,  independent of $$t_0$$, such that 
 
--  **assymptotically stable** if it is stable, and there is a positive constant $$c = c(t_0) > 0$$ such that 
+$$ \|x(t_0)\| < \delta(\epsilon) \implies \| x(t) \| < \epsilon, \quad \forall t \geq t_0 \geq 0$$ 
 
-$$
-\| x(t_0) \| < c \implies \lim_{t \rightarrow \infty} x(t) = 0
-$$
-
--  **uniformly asymptotically stable** if $$c >0$$ can be chosen independently of $$t_0$$ such that $$x=0$$ is asymptotically stable. Put another way, for each $$\eta > 0$$ there is a $$T = T(\eta) > 0$$ such that 
+-  **asymptotically stable** if it is stable, and there is a positive constant $$c = c(t_0) > 0$$ such that 
 
 $$
-\|x(t_0)\| < c \implies \| x(t) \| < \eta, \quad \forall t \geq t_0 + T(\eta)
+\lim_{t\rightarrow\infty} x(t)  = 0, \quad \forall \| x(t_0) \| < c(t_0)
+$$
+
+-  **uniformly asymptotically stable** if it is uniformly stable, and there is a $$c >0$$, independent of $$t_0$$, such for all $$\|x(t_0) \| < c$$,
+
+$$
+x(t) \rightarrow 0 \text{ as } t \rightarrow \infty
+$$
+
+That is, for each $$\eta > 0$$, there is a $$T = T(\eta) > 0$$ such that 
+
+$$
+\| x(t) \| < \eta, \quad \forall t \geq t_0 + T(\eta), \quad \forall \|x(t_0)\| < c 
 $$
 
 -  **globally uniformly assymptotically stable** if 
-  1. it is stable,
+  1. it is uniformly stable,
   2. $$\delta(\epsilon)$$ can be chosen to statisfy $$\lim_{\epsilon \rightarrow \infty} \delta(\epsilon) = \infty$$
-  3. for each positive number $$\eta, c > 0$$ there exists a $$T(\eta, c) > 0$$ such that
+  3. for each pair of positive numbers $$\eta, c > 0$$ there exists a $$T(\eta, c) > 0$$ such that
 
-    $$ \|x(t_0)\| < c \implies \| x(t) \| < \eta, \quad \forall t\geq t_0 + T(\eta, c)$$
+    $$ \| x(t) \| < \eta, \quad \forall t\geq t_0 + T(\eta, c), \quad \forall \|x(t_0)\| < c$$
 
 
 
