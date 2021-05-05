@@ -3,7 +3,7 @@
 
 A simple collection of technical notes that I would rather not forget. 
 
-Built using the brilliant theme Just the Docs.
+Built using the brilliant theme `Just the Docs`.
 
 ## Reference:
 main:
