@@ -11,7 +11,7 @@ math: katex
 
 This page summarizes/motivates how Kane's dynamical equations of motion are derived and used. Basic understanding of vector mechanics and derivatives is assumed.
 
-There are a few references I have used when preparing these notes, but the clearest was ![this paper](https://dspace.mit.edu/bitstream/handle/1721.1/105588/26223102-MIT.pdf?sequence=1).
+There are a few references I have used when preparing these notes, but the clearest was [this thesis](https://dspace.mit.edu/bitstream/handle/1721.1/105588/26223102-MIT.pdf?sequence=1).
 
 ## Review of Lagrange's Equations:
 
@@ -144,7 +144,7 @@ $$
 and the inertial forces are:
 
 $$
-\tilde F_r^{B} = {}^A \tilde{\bm{\omega}}_r^{B} \cdot \bm T^* + \tilde{\bm{v}}_r^{Q} \cdot {\bm{R}^*}^B, \quad r=\{1, ..., p\}
+\tilde {F_r^{B}}^* = {}^A \tilde{\bm{\omega}}_r^{B} \cdot \bm T^* + \tilde{\bm{v}}_r^{Q} \cdot {\bm{R}^*}^B, \quad r=\{1, ..., p\}
 $$
 
 where 
