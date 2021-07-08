@@ -188,8 +188,6 @@ $$
 
 which means $$ a^T = -L_gh$$ and $$b = \alpha h + L_fh$$
 
-If $$L_fh + L_gh u_0 + \alpha h  \geq 0$$: 
-
 $$
 u^* = u_0
 $$
@@ -209,8 +207,6 @@ $$
 \text{subject to} & L_fV + L_gV u \leq -\alpha V
 \end{array}
 $$
-
-which means $$ a^T = L_gV$$ and $$b = -\alpha V - L_fV$$
 
 If $$L_fV + L_gV u_0 + \alpha h  \leq 0$$: 
 
