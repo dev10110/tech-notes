@@ -196,7 +196,7 @@ $$
 Else:
 
 $$
-u^* = u_0 - \frac{L_fh + L_gh u_0 + \alpha h}{L_gh P^{-1} L_gh^T} P^{-1} L_gh
+u^* = u_0 - \frac{L_fh + L_gh u_0 + \alpha h}{L_gh P^{-1} L_gh^T} P^{-1} L_gh^T
 $$
 
 
@@ -204,12 +204,14 @@ $$
 
 $$
 \begin{array}{rl}
-\text{minimize} & \frac{1}{2} (u-u_0)^T P (u-u_0)\\
-\text{subject to} & L_fV + L_gV u \leq -\alpha V
+\text{minimize} & \frac{1}{2} (u-u_0)^T P (u-u_0) + q \delta^2\\
+\text{subject to} & L_fV + L_gV u \leq -\alpha V + \delta
 \end{array}
 $$
 
-If $$L_fV + L_gV u_0 + \alpha h  \leq 0$$: 
+where $$\delta$$ is also to be solved for, and $$q>0$$.
+
+If $$L_fV + L_gV u_0 + \alpha V   \leq 0$$: 
 
 $$
 u^* = u_0
@@ -218,8 +220,13 @@ $$
 Else:
 
 $$
-u^* = u_0 - \frac{L_fV + L_gV u_0 + \alpha V}{L_gV P^{-1} L_gV^T} P^{-1} L_gV
+u^* = u_0 - \frac{L_fV + L_gV u_0 + \alpha V }{L_gV P^{-1} L_gV^T + \frac{1}{q}} P^{-1} L_gV^T
 $$
+
+$$
+\delta^* =  \frac{L_fV + L_gV u_0 + \alpha V }{1 + q L_gV P^{-1} L_gV^T } 
+$$
+
 
 Note these expressions break when $$L_gh=0$$ or $$L_gV=0$$. Higher order CBFs are required in this case. 
 
