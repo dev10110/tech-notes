@@ -186,7 +186,8 @@ $$
 \end{array}
 $$
 
-which means $$ a^T = -L_gh$$ and $$b = \alpha h + L_fh$$
+
+If $$L_fh + L_gh u_0 + \alpha h  \geq 0$$: 
 
 $$
 u^* = u_0
