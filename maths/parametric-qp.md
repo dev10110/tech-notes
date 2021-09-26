@@ -28,13 +28,13 @@ $$
 
 that is, some function of the parameter $$\epsilon$$. The question is: 
 
-Is $$f$$ a Lipschitz continous function?
+Is $$f$$ a Lipschitz continous function, assuming a solution exists for all $$\epsilon$$?
 
 --------------------------------------
 
 I used to think it was. And it is, if the rows of $$A$$ are linearly independent. However in the case where it is not, we can have issues. 
 
-Here is a concrete (super simple) example, to show that $$f$$ may not even be Lipschitz. 
+Here is a concrete (super simple) example, to show that $$f$$ may not even be continous. 
 
 Consider the following QP:
 
@@ -59,12 +59,12 @@ $$
 
 and thus the solution always exists.
 
-If we plot this solution:
+If we plot this solution **you can see that the solution $$x_2$$ is not even continous around $$\epsilon=0$$!**
 
 ![](../assets/images/parametric_qp/sol_x_1.png)
 ![](../assets/images/parametric_qp/sol_x_2.png)
 
-**And you can see that the solution $$x_2$$ is not even continous around $$\epsilon=0$$!**
+
 
 This is because around $$\epsilon=0$$, the $$A(\epsilon)$$ matrix does not have linearly independent rows. 
 
