@@ -3,7 +3,7 @@ layout: default
 title:  "Lyapunov Stability"
 date:   2021-04-17
 categories: math
-parent: Non-Linear Systems
+parent: Nonlinear Systems
 math: katex
 ---
 

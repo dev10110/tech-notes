@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Non-Linear Systems
+title:  Nonlinear Systems
 math: katex
 has_children: true
 ---
