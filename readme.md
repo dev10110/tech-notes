@@ -21,6 +21,18 @@ bundle exec jekyll serve
 ```
 and navigate to the listed location. 
 
+You can also run 
+```
+bundle exec jekyll serve --livereload --port 4001
+```
+to specify a port number.
+
 After every edit, we can refresh the page to see the updates.
 
+If `bundle exec` isnt working, you might need to reinstall bundle
+
+```
+gem uninstall bundler
+gem install bundler
+```
 
