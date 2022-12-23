@@ -44,7 +44,7 @@ ls /dev/input
 ```
 should contain a joystick, something like `js0`. We can see the raw values by:
 ```
-sudo jtest /dev/input/js0
+sudo jstest /dev/input/js0
 ```
 
 2. Give the user permissions to access this input device 
