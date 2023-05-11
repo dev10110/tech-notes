@@ -156,7 +156,7 @@ Here are a few starting points for PID tuning:
 | 0.125 | 1.0 | 6.68 | 3.14 | 
 
 
-As a rough gauge of the control input required, the peak control input is likely to be at the very start, where the control input is $$u = k_x (x_ref - x) + k_v (v_ref - v) = k_x$$.
+As a rough gauge of the control input required, the peak control input is likely to be at the very start, where the control input is $$u = k_x (x_{ref} - x) + k_v (v_{ref} - v) = k_x$$.
 So by looking at the $$k_x$$ term, we can get a sense of the order of magnitude of the control input for a step input. 
 
 
