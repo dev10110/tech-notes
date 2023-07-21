@@ -12,7 +12,7 @@ parent: Coding
 
 In `cmake 3.16` there is a new command: `target_precompile_headers`.  This will speed up compilation, since c++ will not rebuild header files that have been compiled. 
 
-Place some of your includes into a dedicated `precompile.hpp` and then `#include "precompile.hpp". Next, in your `CMakeLists.txt` add the following:
+Place some of your includes into a dedicated `precompile.hpp` and then `#include "precompile.hpp"`. Next, in your `CMakeLists.txt` add the following:
 ```
 target_precompile_headers(<target> PRIVATE 
     include/precompile.hpp
