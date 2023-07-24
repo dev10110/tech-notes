@@ -37,7 +37,12 @@ target_precompile_headers(<target> PRIVATE
     include/precompile.hpp
 )
 ```
-
 which will tell `cmake` to precompile this header file. Dont forget to set the `cmake_version` to be atleast 3.16. 
 
 Reference: [https://www.youtube.com/watch?v=eSI4wctZUto](https://www.youtube.com/watch?v=eSI4wctZUto)
+
+
+## Good References
+Most articles on `cmake` are pretty bad or assume much prior knowledge.  Here are a few that I found quite useful:
+- https://bastian.rieck.me/blog/posts/2018/cmake_tips/
+- 
