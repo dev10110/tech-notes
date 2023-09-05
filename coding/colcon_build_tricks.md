@@ -31,9 +31,9 @@ In general, this is the fastest method, since it directly invokes `make`. We hav
 ## Using a `Makefile`:
 
 Create the file `colcon_ws/Makefile`:
-```Makefile
+```make
 mode=Release
-.SILENT: all
+.SILENT: all clean
 .PHONY: all clean
 
 all: 
@@ -54,7 +54,7 @@ clean:
                 rm -r build/$(pkg) install/$(pkg); \
         fi
 ```
-(be careful with tabs/spaces and trailing tabs/spaces)
+(be careful with leading/trailing tabs/spaces)
 
 To use this, from `colcon_ws`, simply run
 ```
@@ -103,4 +103,7 @@ to build all packages, or
 ```
 ./build.sh my_pkg
 ```
-to build only `my_pkg`.
+to build only `my_pkg`. You can also make it build multiple packages:
+```
+./build.sh my_pkg1 my_pkg2 my_pkg3
+```
