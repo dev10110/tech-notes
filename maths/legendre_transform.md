@@ -15,7 +15,7 @@ Most of this, of course, comes from Boyd's book on Convex Optimization (see Sect
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/lEN2xvTTr0E?si=xLoqzS40nbk3rCtb&amp;start=1639" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-Unfortunately, I still don't have a very good intuition for what the conjugate function means. If anyone has a good physical interpretation, please let me know. 
+[This page](../assets/pdfs/convex_conjugate.pdf) has some additional details, interpretations, and uses of the convex conjugate that is really good!
 
 
 ## Definition: Conjugate Function
