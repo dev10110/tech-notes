@@ -137,6 +137,8 @@ $$
 
 where $$y = \nabla f(z)$$, since we used the substitutions $$\{ x^* \to z, y \to \nabla f(x^*) \}$$. 
 
+We are allowed to do this substitution since (A) $$f$$ is convex implies $$-f$$ is concave, (B) therefore $$y^T x - f(x)$$ is the sum of an affine function (and therefore concave function) and a concave function, and therefore must be a concave function.  (C) Since $$y^T x - f(x)$$ is a concave function, there exists a unique maximizer.
+
 
 ## Examples: 
 
