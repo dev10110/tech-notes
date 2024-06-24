@@ -32,11 +32,11 @@ In general, this is the fastest method, since it directly invokes `make`. We hav
 
 Create the file `colcon_ws/Makefile`:
 ```make
-mode=Release
-.SILENT: all clean
-.PHONY: all clean
+mode=RelWithDebInfo
+.SILENT: build clean test
+.PHONY: build clean test
 
-all: 
+build: 
         if [ -z "$(pkg)" ]; then \
                 echo "building all"; \
                 colcon build --symlink-install --cmake-args -DCMAKE_BUILD_TYPE=$(mode); \
@@ -52,6 +52,15 @@ clean:
         else \
                 echo "cleaning $(pkg)"; \
                 rm -r build/$(pkg) install/$(pkg); \
+        fi
+
+test:  all
+        if [ -z "$(pkg)" ]; then \
+                echo "specify the pkg to test"; \
+        else \
+                echo "testing $(pkg)"; \
+                colcon test --packages-select $(pkg);\
+                colcon test-result --verbose; \
         fi
 ```
 (be careful with leading/trailing tabs/spaces)
@@ -77,6 +86,11 @@ or
 pkg=my_pkg make clean
 ```
 to remove the build and install folders of `my_pkg`.
+
+To run the tests, (see [unit-testing](https://dev10110.github.io/tech-notes/coding/unit-testing.html)),
+```
+pkg=my_pkg make test
+```
 
 
 
