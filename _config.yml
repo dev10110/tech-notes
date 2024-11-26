@@ -74,3 +74,6 @@ gh_edit_branch: "master"
 gh_edit_view_mode: "blob"
 
 footer_content: "By Devansh Agrawal."
+
+ga_tracking: G-7CLFWW7J36
+ga_tracking_anonymize_ip: true # Use GDPR compliant Google Analytics settings (true/nil by default)
