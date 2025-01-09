@@ -45,4 +45,5 @@ Reference: [https://www.youtube.com/watch?v=eSI4wctZUto](https://www.youtube.com
 ## Good References
 Most articles on `cmake` are pretty bad or assume much prior knowledge.  Here are a few that I found quite useful:
 - https://bastian.rieck.me/blog/posts/2018/cmake_tips/
-- 
+- http://nuclear.mutantstargoat.com/articles/make/
+

@@ -1,6 +1,6 @@
 ---
 layout: default
-title:  Makefiles: How to
+title:  Makefiles - How to
 date:   2022-12-23
 parent: Coding
 ---
