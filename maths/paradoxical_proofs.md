@@ -54,12 +54,11 @@ We know very well that the maximum principle only provides necessary conditions 
 > 
 > Base Case: In a group of $$N=1$$ people, obviously all people have the same email address. 
 >
-> Induction step: Suppose the claim holds true for some $$k$$. We now show that the claim also holds true for $$k+1$$. To do so, consider $$k+1$$ people in a line. The first $$k$$ people, i.e., the set of people $$1$$ to $$k$$, is a group of $$k$$ people, and therefore have the same email address. Now consider the last $$k$$ people, i.e. the set of people $$2$$ to $$k+1$$. Since this too is a group of $$k$$ people, they must also have the same email address. Therefore, all people must have the same address. 
+> Induction step: Fix $$k$$. Suppose any set of $$k$$ people have the same email address by the inductive hypothesis. Consider now any set of $$k+1$$ people. Then, by the inductive hypothesis, people 1 to $$k$$ have the same email address. There is only one person left to check. But we also know that people 2 to $$k+1$$ have the same email address by the inductive hypothesis. Thus they all have the same email address. 
 > 
-> In this way, by induction, we know that for any group of $$k$$ people must have the same email address. Since there are a (countably) finite number of people on Earth, they must all have the same email address. 
+> In this way, by induction, we know that any group of $$k$$ people must have the same email address. Since there are a (countably) finite number of people, they must all have the same email address. 
 
 <details>
 <summary> Wheres the flaw? </summary>
-
 The flaw is that the induction step only holds true for $$k>=2$$, and does not apply to $$k=1$$. Hence, although the base case is true, and the induction step is true, we cannot apply the induction step to the base case. This example highlights a common flaw in induction, where people forget to show that the induction step also holds for the base case. 
 </details>
