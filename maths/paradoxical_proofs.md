@@ -62,3 +62,44 @@ We know very well that the maximum principle only provides necessary conditions 
 <summary> Wheres the flaw? </summary>
 The flaw is that the induction step only holds true for $$k\geq2$$, and does not apply to $$k=1$$. Hence, although the base case is true, and the induction step is true, we cannot apply the induction step to the base case. This example highlights a common flaw in induction, where people forget to show that the induction step also holds for the base case. 
 </details>
+
+
+## $$\pi = 4$$
+
+{: .note-title}
+> Theorem:
+> 
+> Let the perimeter of a circle of diameter $$d$$ be $$C = \pi d$$. Then $$\pi = 4$$. 
+
+{: .highlight-title}
+> Proof: 
+> 
+> See the image below:
+
+![image](../assets/images/paradoxical_proofs/pi_is_four.jpg)
+
+<details markdown="block">
+<summary>Wheres the flaw?</summary>
+There are a few ways to look at this, but I think [this stackexchange](https://math.stackexchange.com/questions/12906/the-staircase-paradox-or-why-pi-ne4) has many explanations, that range from intuitive to analytical. 
+
+What this gets at though is that a function of a limit might not be the same as the limit of the function. Consider this explanation from [Kurt](https://math.stackexchange.com/a/5073366/1624863):
+
+Let's say your approximation curve is denoted as $$C_1, C_2, ...$$, where $$C_1$$ is the square, and $$C_2$$ is the cut square, and so on. Let $$P(x)$$ be the perimeter function.
+
+The limit curve is indeed a circle:
+
+$$
+\lim_{n \to \infty} C_n = \text{Circle}.
+$$
+
+However, the limit is not always changable with $$P$$:
+
+$$
+P( \lim_{n \to \infty} C_n) \neq \lim_{n \to \infty} P(C_n).
+$$
+
+Thus, we should ask, under what circumstances the latter is equal. One of the condition is that the curves $$C_n$$ also converge to circle in their derivatives, which is not true in this case.
+
+I would like to add that some people would argue about fact 1, that "the curve is not a circle and never will be", is an incorrect explaination.
+
+</details>
