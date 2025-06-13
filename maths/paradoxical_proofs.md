@@ -58,7 +58,7 @@ We know very well that the maximum principle only provides necessary conditions 
 > 
 > In this way, by induction, we know that any group of $$k$$ people must have the same email address. Since there are a (countably) finite number of people, they must all have the same email address. 
 
-<details>
+<details markdown="block">
 <summary> Wheres the flaw? </summary>
-The flaw is that the induction step only holds true for $$k>=2$$, and does not apply to $$k=1$$. Hence, although the base case is true, and the induction step is true, we cannot apply the induction step to the base case. This example highlights a common flaw in induction, where people forget to show that the induction step also holds for the base case. 
+The flaw is that the induction step only holds true for $$k\geq2$$, and does not apply to $$k=1$$. Hence, although the base case is true, and the induction step is true, we cannot apply the induction step to the base case. This example highlights a common flaw in induction, where people forget to show that the induction step also holds for the base case. 
 </details>
